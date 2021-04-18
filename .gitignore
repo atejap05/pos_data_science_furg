@@ -1,6 +1,6 @@
 #https://linuxize.com/post/gitignore-ignoring-files-in-git/
 #https://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/
-datasets/
+#datasets/
 .vscode/
 .ipynb_checkpoints/
 logs
