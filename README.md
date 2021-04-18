@@ -11,4 +11,4 @@ conda activate pos_ds
 
 conda install pip
 
-pip install requirements.txt
+pip install -r requirements.txt
