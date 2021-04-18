@@ -1,0 +1,12 @@
+tensorflow
+numpy
+scipy
+matplotlib
+pandas
+sympy
+Seaborn
+statsmodels
+scikit-learn
+jupyter
+jupyterlab
+opencv-python
