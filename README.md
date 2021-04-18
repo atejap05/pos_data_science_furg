@@ -11,4 +11,8 @@ conda activate pos_ds
 
 conda install pip
 
+git clone https://github.com/atejap05/pos_data_science_furg.git
+
+cd pos_data_science_furg
+
 pip install -r requirements.txt
