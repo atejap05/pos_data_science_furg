@@ -1,0 +1,78 @@
+{
+    "locadora": {
+        "albuns": {
+            "CD_I": {
+                "field1": {
+                    "@name": "gravadora",
+                    "#text": "A Melhor Gravadora"
+                },
+                "field2": {
+                    "@name": "numMusicas",
+                    "#text": "20"
+                },
+                "field3": {
+                    "@name": "artista",
+                    "#text": "joelzinho dos teclados"
+                },
+                "field4": {
+                    "@name": "titulo",
+                    "#text": "Forro na Veia"
+                },
+                "field5": {
+                    "@name": "genero",
+                    "#text": "Pizadinha do Forro"
+                },
+                "field6": {
+                    "@name": "ano",
+                    "#text": "2035"
+                },
+                "Musicas": {
+                    "field1": {
+                        "@name": "musica01",
+                        "#text": "Arrocha que ela gosta"
+                    },
+                    "field2": {
+                        "@name": "musica02",
+                        "#text": "Arrocha que ela gosta 2"
+                    }
+                }
+            },
+            "CD_II": {
+                "field1": {
+                    "@name": "gravadora",
+                    "#text": "Melhor Que a Outra"
+                },
+                "field2": {
+                    "@name": "numMusicas",
+                    "#text": "25"
+                },
+                "field3": {
+                    "@name": "artista",
+                    "#text": "joelzinho dos teclados"
+                },
+                "field4": {
+                    "@name": "titulo",
+                    "#text": "Forro da Peste"
+                },
+                "field5": {
+                    "@name": "genero",
+                    "#text": "Pizadinha do Forro"
+                },
+                "field6": {
+                    "@name": "ano",
+                    "#text": "2055"
+                },
+                "Musicas": {
+                    "field1": {
+                        "@name": "musica01",
+                        "#text": "Na Casa da Dinda Eu Fui Feliz"
+                    },
+                    "field2": {
+                        "@name": "musica02",
+                        "#text": "Apaga a Luz e Vem Rebolar"
+                    }
+                }
+            }
+        }
+    }
+}

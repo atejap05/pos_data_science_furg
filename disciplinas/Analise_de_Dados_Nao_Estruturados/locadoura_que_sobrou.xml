@@ -1,0 +1,28 @@
+<locadora>
+    <albuns>
+        <CD_I>
+            <field1 name="gravadora">A Melhor Gravadora</field1>
+            <field2 name="numMusicas">20</field2>
+            <field3 name="artista">joelzinho dos teclados</field3>
+            <field4 name="titulo">Forro na Veia</field4>
+            <field5 name="genero">Pizadinha do Forro</field5>
+            <field6 name="ano">2035</field6>
+            <Musicas>
+                <field1 name="musica01">Arrocha que ela gosta</field1>
+                <field2 name="musica02">Arrocha que ela gosta 2</field2>
+            </Musicas>
+        </CD_I>
+        <CD_II>
+            <field1 name="gravadora">Melhor Que a Outra</field1>
+            <field2 name="numMusicas">25</field2>
+            <field3 name="artista">joelzinho dos teclados</field3>
+            <field4 name="titulo">Forro da Peste</field4>
+            <field5 name="genero">Pizadinha do Forro</field5>
+            <field6 name="ano">2055</field6>
+            <Musicas>
+                <field1 name="musica01">Na Casa da Dinda Eu Fui Feliz</field1>
+                <field2 name="musica02">Apaga a Luz e Vem Rebolar</field2>
+            </Musicas>
+        </CD_II>
+    </albuns>
+</locadora>
