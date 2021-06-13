@@ -10,3 +10,4 @@ scikit-learn
 jupyter
 jupyterlab
 opencv-python
+xmltodict
