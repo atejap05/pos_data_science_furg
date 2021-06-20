@@ -11,3 +11,4 @@ jupyter
 jupyterlab
 opencv-python
 xmltodict
+geopy
