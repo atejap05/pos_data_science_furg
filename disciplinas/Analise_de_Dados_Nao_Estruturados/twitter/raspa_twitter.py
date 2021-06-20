@@ -1,6 +1,7 @@
 import urllib
 import tweepy
 from geopy.geocoders import Nominatim
+from pyUFbr.baseuf import ufbr
 
 
 # Para se utilizar essa API, é necessário obter autorização de acesso como desenvolvedor 
@@ -55,13 +56,15 @@ def tw_search(api):
         if (counter == cmax):
             break
 
-def get_location_coordinates(location: str):
+def get_coord_dict(uf: str):
 
+    if len(uf) == 2:
+        uf_name = ufbr.dict_uf.SPget(uf.upper()).get('nome')
+    uf_name=uf
     geoLoc = Nominatim(user_agent='GeoHack')
-    loc = geoLoc.geocode(location)
+    loc = geoLoc.geocode({"country": "Brazil", "state": uf_name})
     
-    return {}
-
+    return {uf_name: f'{loc.longitude}, {loc.latitude}, 20km'}
 
 
 # MAIN ROUTINE
@@ -77,29 +80,27 @@ def main():
     # Aqui na variável locords voce pode inserir o seu municipio
     # buscando as coordenadas geográficas diretamente no Google
                 
-    locords =  {'lo': '0, 51.503, 20km',
+    """locords =  {'lo': '0, 51.503, 20km',
                 'nyl': '-74, 40.73, 2mi',
                 'nym': '-74, 40.74, 2mi',
                 'nyu': '-73.96, 40.78, 2mi',
                 'dc': '-77.04, 38.91, 2mi',
                 'sf': '-122.45, 37.74, 10km',
                 'nb': '-74.45, 40.49, 2mi',
-                'rg': '-52.05, -32.02, 10km',
-                'mt': '-55.57, -12.21, 10km',}# Rio Grande
-                
+                'rg': '-52.05, -32.02, 10km}# Rio Grande"""
 
+    uf = input("Informe a UF brasileira: ")
+    locords = get_coord_dict(uf)
+    print(f'Critérios de busca: {locords}')
+    query = input("Informe o tema de interesse: ")            
     # Maximum allowed tweet count (note: Twitter sets this to ~180 per 15 minutes)
     cmax = 100
-    
-    query = "Covid19"
     local = 'mt'  #'lo', 'nyl', 'nym', 'nyu', 'dc', 'sf', 'nb', 'rg'
     language  = 'pt'  #'en','fr','es','pt'
     tp  = 'popular' #'mixed','recent','popular'
     counting  = 100 
-
     # Function to get authorization from Twitter
     api = tw_oauth()
-
     # Function to search data in Twitter
     tw_search(api)
 
