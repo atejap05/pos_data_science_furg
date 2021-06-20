@@ -1,10 +1,5 @@
 # importing geopy library
 
-import geopy
-
-
-
-"""
 from geopy.geocoders import Nominatim
   
 # calling the Nominatim tool
@@ -19,4 +14,3 @@ print(getLoc.address)
 # printing latitude and longitude
 print("Latitude = ", location.latitude, "\n")
 print("Longitude = ", location.longitude)
-"""
