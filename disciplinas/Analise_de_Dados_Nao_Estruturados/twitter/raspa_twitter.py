@@ -1,5 +1,6 @@
 import urllib
 import tweepy
+from geopy.geocoders import Nominatim
 
 
 # Para se utilizar essa API, é necessário obter autorização de acesso como desenvolvedor 
@@ -51,10 +52,19 @@ def tw_search(api):
         print(username, text, source, sep=" ; ", end="\n")
        
         counter = counter + 1
-        if (counter == counting):
+        if (counter == cmax):
             break
 
-    # MAIN ROUTINE
+def get_location_coordinates(location: str):
+
+    geoLoc = Nominatim(user_agent='GeoHack')
+    loc = geoLoc.geocode(location)
+    
+    return {}
+
+
+
+# MAIN ROUTINE
 def main():
 
     global api, cmax, locords
@@ -74,14 +84,15 @@ def main():
                 'dc': '-77.04, 38.91, 2mi',
                 'sf': '-122.45, 37.74, 10km',
                 'nb': '-74.45, 40.49, 2mi',
-                'rg': '-52.05, -32.02, 10km'}# Rio Grande
+                'rg': '-52.05, -32.02, 10km',
+                'mt': '-55.57, -12.21, 10km',}# Rio Grande
                 
 
     # Maximum allowed tweet count (note: Twitter sets this to ~180 per 15 minutes)
     cmax = 100
     
-    query = "Futebol"
-    local = 'rg'  #'lo', 'nyl', 'nym', 'nyu', 'dc', 'sf', 'nb', 'rg'
+    query = "Covid19"
+    local = 'mt'  #'lo', 'nyl', 'nym', 'nyu', 'dc', 'sf', 'nb', 'rg'
     language  = 'pt'  #'en','fr','es','pt'
     tp  = 'popular' #'mixed','recent','popular'
     counting  = 100 
